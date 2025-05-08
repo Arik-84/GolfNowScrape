@@ -12,7 +12,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.get("https://www.golfnow.com/")
 time.sleep(6)
 
-# STEP 1: Close popup
+#Close popup
 try:
     iframe = driver.find_elements(By.TAG_NAME, "iframe")[13]
     driver.switch_to.frame(iframe)
@@ -25,7 +25,7 @@ try:
 except:
     driver.switch_to.default_content()
 
-# STEP 2: Search for Toronto
+#Search for Toronto
 try:
     search_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "fed-search-big")))
     for char in "Toronto":
@@ -50,7 +50,7 @@ try:
 except Exception as e:
     print("Search failed:", e)
 
-# STEP 3: Scroll to bottom to load all courses
+#Scroll to bottom to load all courses
 last_height = driver.execute_script("return document.body.scrollHeight")
 while True:
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
@@ -60,7 +60,7 @@ while True:
         break
     last_height = new_height
 
-# STEP 4: Scrape all course tee times
+#Scrape all course tee times
 all_data = []
 visited = set()
 view_links = driver.find_elements(By.PARTIAL_LINK_TEXT, "View Tee Times")
