@@ -63,28 +63,8 @@ Date (e.g., "2025-05-07")
 
 5. Output
 The script saves a file named like:
-
-Copy
-Edit
 golf_results_Toronto_2025-05-07.csv
-Containing:
 
-Course Name	Tee Time	Price	Address
-Don Valley GC	8:30 AM	$65	4200 Yonge St, Toronto...
-
-Project Structure
-php-template
-Copy
-Edit
-golfnow-scraper/
-├── golfnow_scraper.py
-├── README.md
-├── requirements.txt
-└── golf_results_<location>_<date>.csv
-📄 License
-This project is licensed under the MIT License.
-
-Would you like me to also generate a requirements.txt file or example output CSV?
 
 
 
