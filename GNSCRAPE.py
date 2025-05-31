@@ -123,5 +123,5 @@ for i, link in enumerate(view_links):
 # Save to CSV
 df = pd.DataFrame(all_data)
 df.to_csv("all_toronto_tee_times_cleaned.csv", index=False)
-print("✅ Saved all course data to all_toronto_tee_times_cleaned.csv")
+print("Saved all course data to all_toronto_tee_times_cleaned.csv")
 driver.quit()
